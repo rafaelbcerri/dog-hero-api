@@ -4,4 +4,5 @@ class User < ApplicationRecord
          :jwt_authenticatable, jwt_revocation_strategy: JwtBlacklist
 
   belongs_to :role
+  has_many :dog
 end
