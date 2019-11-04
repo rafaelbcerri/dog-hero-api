@@ -5,4 +5,5 @@ class User < ApplicationRecord
 
   belongs_to :role
   has_many :dog
+  has_many :dog_walking
 end

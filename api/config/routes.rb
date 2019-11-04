@@ -11,5 +11,6 @@ Rails.application.routes.draw do
       registrations: 'registrations'
     }
 
-    resources :users
+    resources :dog_walking
+    put 'users/:id', to: 'users#update'
 end
