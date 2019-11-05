@@ -1,2 +1,80 @@
 class DogWalkingsController < ApplicationController
+  before_action :authenticate_user!
+
+  def index
+    if params[:all]
+      dog_walking = DogWalking.paginate(
+        page: params['page'],
+        per_page: params['per_page']
+      )
+    else
+      dog_walking = DogWalking
+        .where(
+          user_id: nil,
+          dog_walking_status_id: 1
+        )
+        .paginate(
+          page: params['page'],
+          per_page: params['per_page']
+        )
+    end
+    paginate json: dog_walking
+  end
+
+  def create
+    dog_walking = DogWalking.new(dog_walking_params)
+    dog_walking.dog_walking_status_id = DogWalkingStatus.find_by_name('created').id;
+
+    if (params['dogs'])
+      dogs = Dog.find(params['dogs'])
+      dog_walking.dogs << dogs
+    end
+
+    dog_walking.calcule_price
+
+    dog_walking.save
+    render json: dog_walking
+  end
+
+  def show
+    dog_walking = DogWalking.find_by_id(params['id'])
+    render json: dog_walking,
+           include: [:dogs, :dog_walking_status, :user],
+           methods: :walk_duration
+  end
+
+  def update
+    dog_walking = DogWalking.find_by_id(params['id'])
+    dog_walking.user = User.find_by_id(params['walker_id']) if params['walker_id']
+    dog_walking.dog_walking_status_id = DogWalkingStatus.find_by_name('scheduled').id
+    dog_walking.save
+    render json: dog_walking
+  end
+
+  def start_walk
+    dog_walking = DogWalking.find(params['dog_walking_id'])
+    dog_walking.dog_walking_status_id = DogWalkingStatus.find_by_name('in_progress').id
+    dog_walking.begin_date = Time.now
+    dog_walking.save
+    render json: dog_walking
+  end
+
+  def finish_walk
+    dog_walking = DogWalking.find(params['dog_walking_id'])
+    dog_walking.dog_walking_status_id = DogWalkingStatus.find_by_name('done').id
+    dog_walking.end_date = Time.now
+    dog_walking.save
+    render json: dog_walking
+  end
+
+  private
+
+  def dog_walking_params
+    params.require(:dog_walking).permit(
+      :duration,
+      :latitude,
+      :longitude,
+      :scheduled_date,
+    )
+  end
 end
