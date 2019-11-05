@@ -3,34 +3,28 @@ class DogWalkingsController < ApplicationController
 
   def index
     if params[:all]
-      dog_walking = DogWalking.paginate(
-        page: params['page'],
-        per_page: params['per_page']
-      )
+      dog_walking = DogWalking.all
     else
-      dog_walking = DogWalking
-        .where(
-          user_id: nil,
-          dog_walking_status_id: 1
-        )
-        .paginate(
-          page: params['page'],
-          per_page: params['per_page']
-        )
+      dog_walking = DogWalking.without_walker_and_status_created
     end
-    paginate json: dog_walking
+
+    paginated_dog_walking = dog_walking.paginate(
+      page: params['page'],
+      per_page: params['per_page']
+    )
+    paginate json: paginated_dog_walking
   end
 
   def create
     dog_walking = DogWalking.new(dog_walking_params)
-    dog_walking.dog_walking_status_id = DogWalkingStatus.find_by_name('created').id;
+    dog_walking.dog_walking_status = DogWalkingStatus.find_by_name('created');
 
     if (params['dogs'])
       dogs = Dog.find(params['dogs'])
       dog_walking.dogs << dogs
     end
 
-    dog_walking.calcule_price
+    dog_walking.calculate_price
 
     dog_walking.save
     render json: dog_walking
@@ -46,14 +40,14 @@ class DogWalkingsController < ApplicationController
   def update
     dog_walking = DogWalking.find_by_id(params['id'])
     dog_walking.user = User.find_by_id(params['walker_id']) if params['walker_id']
-    dog_walking.dog_walking_status_id = DogWalkingStatus.find_by_name('scheduled').id
+    dog_walking.dog_walking_status = DogWalkingStatus.find_by_name('scheduled')
     dog_walking.save
     render json: dog_walking
   end
 
   def start_walk
     dog_walking = DogWalking.find(params['dog_walking_id'])
-    dog_walking.dog_walking_status_id = DogWalkingStatus.find_by_name('in_progress').id
+    dog_walking.dog_walking_status = DogWalkingStatus.find_by_name('in_progress')
     dog_walking.begin_date = Time.now
     dog_walking.save
     render json: dog_walking
@@ -61,7 +55,7 @@ class DogWalkingsController < ApplicationController
 
   def finish_walk
     dog_walking = DogWalking.find(params['dog_walking_id'])
-    dog_walking.dog_walking_status_id = DogWalkingStatus.find_by_name('done').id
+    dog_walking.dog_walking_status = DogWalkingStatus.find_by_name('done')
     dog_walking.end_date = Time.now
     dog_walking.save
     render json: dog_walking

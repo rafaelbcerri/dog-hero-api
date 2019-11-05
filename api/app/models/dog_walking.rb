@@ -3,7 +3,9 @@ class DogWalking < ApplicationRecord
   belongs_to :dog_walking_status
   belongs_to :user, optional: true
 
-  def calcule_price
+  scope :without_walker_and_status_created, -> { where(user_id: nil, dog_walking_status_id: 1) }
+
+  def calculate_price
     return 0 if self.dogs.nil? || self.duration.nil?
 
     extra_dogs = self.dogs.length - 1
