@@ -11,6 +11,12 @@ Rails.application.routes.draw do
       registrations: 'registrations'
     }
 
-    resources :dog_walking
+    resources :dog_walkings do
+      post '/start_walk', to: 'dog_walkings#start_walk'
+      post '/finish_walk', to: 'dog_walkings#finish_walk'
+    end
+
+    put 'users/me', to: 'users#get_me'
     put 'users/:id', to: 'users#update'
+    get 'users/:id/dog_walkings', to: 'users#get_dog_walkings'
 end
