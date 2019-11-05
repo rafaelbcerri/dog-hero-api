@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_04_000237) do
+ActiveRecord::Schema.define(version: 2019_11_04_030945) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "dog_walking_statuses", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "dog_walkings", force: :cascade do |t|
     t.integer "duration"
@@ -21,13 +27,21 @@ ActiveRecord::Schema.define(version: 2019_11_04_000237) do
     t.string "longitude"
     t.datetime "begin_date"
     t.datetime "end_date"
-    t.string "status"
     t.datetime "scheduled_date"
     t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.bigint "dog_walking_status_id"
+    t.index ["dog_walking_status_id"], name: "index_dog_walkings_on_dog_walking_status_id"
     t.index ["user_id"], name: "index_dog_walkings_on_user_id"
+  end
+
+  create_table "dog_walkings_dogs", id: false, force: :cascade do |t|
+    t.bigint "dog_walking_id", null: false
+    t.bigint "dog_id", null: false
+    t.index ["dog_id", "dog_walking_id"], name: "index_dog_walkings_dogs_on_dog_id_and_dog_walking_id"
+    t.index ["dog_walking_id", "dog_id"], name: "index_dog_walkings_dogs_on_dog_walking_id_and_dog_id"
   end
 
   create_table "dogs", force: :cascade do |t|
@@ -63,12 +77,13 @@ ActiveRecord::Schema.define(version: 2019_11_04_000237) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "role_id"
-    t.string "img"
+    t.string "image"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["role_id"], name: "index_users_on_role_id"
   end
 
+  add_foreign_key "dog_walkings", "dog_walking_statuses"
   add_foreign_key "dog_walkings", "users"
   add_foreign_key "dogs", "users"
   add_foreign_key "users", "roles"
