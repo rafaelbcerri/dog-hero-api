@@ -3,8 +3,6 @@ class DogWalking < ApplicationRecord
   belongs_to :dog_walking_status
   belongs_to :user, optional: true
 
-  private
-
   def calcule_price
     return 0 if self.dogs.nil? || self.duration.nil?
 
@@ -17,10 +15,9 @@ class DogWalking < ApplicationRecord
   end
 
   def walk_duration
-    return 0 if self.begin_date.nil? || self.end_date.nil?
+    return '00:00:00' if self.begin_date.nil? || self.end_date.nil?
 
-    # ((self.end_date - self.begin_date) / 1.minutes).round(2)
-    (self.end_date.minus_with_coercion(self.begin_date)).round(2) / 1.minutes
-    Time.at((self.end_date - self.begin_date).to_i.abs).utc.strftime "%H:%M:%S"
+    time_difference = self.end_date - self.begin_date
+    Time.at(time_difference.to_i.abs).utc.strftime '%H:%M:%S'
   end
 end
