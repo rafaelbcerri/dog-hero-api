@@ -5,8 +5,8 @@ FactoryBot.define do
   end
 
   factory :user, aliases: [:pet_owner_user] do
-    name { 'João' }
-    email { 'joao@gmail.com' }
+    name { 'Testador' }
+    email { 'testador@gmail.com' }
     password { '123123' }
     password_confirmation { '123123' }
     association :role, factory: :pet_owner_role

@@ -1,0 +1,57 @@
+{
+  "resource": "Registration",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/signup",
+  "description": "400",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "email",
+      "description": "email"
+    },
+    {
+      "required": true,
+      "name": "password",
+      "description": "password"
+    },
+    {
+      "required": true,
+      "name": "role",
+      "description": "role"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/signup",
+      "request_body": "{\"email\":\"joao@gmail.com\",\"password\":\"123123\",\"role\":\"walker\"}",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 400,
+      "response_status_text": "Bad Request",
+      "response_body": "{\n  \"error\": {\n    \"email\": [\n      \"has already been taken\"\n    ]\n  }\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "c0c7045a-ee55-402d-a519-641c5bb9e279",
+        "X-Runtime": "0.204757",
+        "Vary": "Origin",
+        "Content-Length": "46"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
-  wrap_parameters :user, include: [:name, :email, :password]
+  wrap_parameters :user, include: [:email, :password]
   respond_to :json
 
   def create
@@ -8,6 +8,13 @@ class RegistrationsController < Devise::RegistrationsController
     resource.role = Role.find_by_name(params['role']) if params['role']
 
     resource.save
-    render_resource(resource)
+
+    if resource.errors.empty?
+      render json: resource
+    else
+      render json: {
+        error: resource.errors.messages
+      }, status: :bad_request
+    end
   end
 end

@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     end
 
     user.save
-    render_resource(user)
+    render json: user
   end
 
   def get_dog_walkings

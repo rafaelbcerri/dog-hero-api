@@ -1,0 +1,54 @@
+{
+  "resource": "Session",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/login",
+  "description": "200",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "email",
+      "description": "User email"
+    },
+    {
+      "required": true,
+      "name": "password",
+      "description": "User password"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/login",
+      "request_body": "{\"email\":\"joao@gmail.com\",\"password\":\"123123\"}",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 1,\n  \"name\": \"João\",\n  \"email\": \"joao@gmail.com\",\n  \"created_at\": \"2019-11-06T04:13:52.429Z\",\n  \"updated_at\": \"2019-11-06T04:13:52.429Z\",\n  \"role_id\": 2,\n  \"image\": \"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&h=400&w=400\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTczMDEzNjMzLCJleHAiOjE1NzMwMTQ1MzMsImp0aSI6IjgyZmQzZDRjLTQ4MGUtNGIxOS1iYzY0LWQ4NDRkMTY3YWRiYiJ9.UMPiYrPizL0YyPd_VQWZZXFvdHUcblRE4yE1PsMc_Rc",
+        "ETag": "W/\"23ef5c4b33bd3670c54e1f4c485c55fc\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "43552de4-b89d-4cc9-95d9-9daa5a5ee7bf",
+        "X-Runtime": "0.189743",
+        "Vary": "Origin",
+        "Content-Length": "268"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

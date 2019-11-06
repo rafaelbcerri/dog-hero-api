@@ -1,0 +1,44 @@
+{
+  "resources": [
+    {
+      "name": "Registration",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "200",
+          "link": "registration/200.json",
+          "groups": "all",
+          "route": "/signup",
+          "method": "post"
+        },
+        {
+          "description": "400",
+          "link": "registration/400.json",
+          "groups": "all",
+          "route": "/signup",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Session",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "200",
+          "link": "session/200.json",
+          "groups": "all",
+          "route": "/login",
+          "method": "post"
+        },
+        {
+          "description": "401",
+          "link": "session/401.json",
+          "groups": "all",
+          "route": "/login",
+          "method": "post"
+        }
+      ]
+    }
+  ]
+}
