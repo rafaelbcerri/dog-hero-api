@@ -1,21 +1,21 @@
 require 'support/acceptance_helper'
 
-resource "Session" do
-  header "Accept", "application/json"
-  header "Content-Type", "application/json"
+resource 'Session' do
+  header 'Accept', 'application/json'
+  header 'Content-Type', 'application/json'
 
   let(:user) { create(:user) }
 
-  post "/login" do
-    parameter :email, "User email", :required => true
-    parameter :password, "User password", :required => true
+  post '/login' do
+    parameter :email, 'User email', :required => true
+    parameter :password, 'User password', :required => true
 
-    context 'when it has valid email and password' do
+    context '200' do
       let(:email) { 'joao@gmail.com' }
       let(:password) { '123123' }
       let(:raw_post) { params.to_json }
 
-      example_request "200" do
+      example_request 'POST - User login' do
 
         expect(status).to eq 200
 
@@ -28,26 +28,25 @@ resource "Session" do
           'role_id' => 2,
         )
 
-        token_from_request = response_headers["Authorization"].split(' ').last
+        token_from_request = response_headers['Authorization'].split(' ').last
         decoded_token = JWT.decode(token_from_request, ENV['DEVISE_SECRET_KEY'], true)
         expect(decoded_token.first['sub']).to eq '1'
       end
     end
 
-    context 'when it has wrong password' do
+    context '401' do
       let(:email) { 'joao@gmail.com' }
       let(:password) { '321321' }
       let(:raw_post) { params.to_json }
 
-      example_request "401" do
+      example_request 'POST - User invalid password' do
         expect(status).to eq 401
 
         resp = JSON.parse(response_body)
         expect(resp['error']).to eq('Invalid Email or password.')
 
-        expect(response_headers["Authorization"]).to be_nil
+        expect(response_headers['Authorization']).to be_nil
       end
     end
-
   end
 end
