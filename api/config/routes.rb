@@ -16,7 +16,6 @@ Rails.application.routes.draw do
       post '/finish_walk', to: 'dog_walkings#finish_walk'
     end
 
-    put 'users/:id', to: 'users#update'
     get 'users/:id/dog_walkings', to: 'users#get_dog_walkings'
 
     mount Raddocs::App => '/docs'
