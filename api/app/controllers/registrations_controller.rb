@@ -1,5 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
-  wrap_parameters :user, include: [:email, :password]
+  wrap_parameters :user, include: [:email, :password, :name]
   respond_to :json
 
   def create
@@ -10,7 +10,7 @@ class RegistrationsController < Devise::RegistrationsController
     resource.save
 
     if resource.errors.empty?
-      render json: resource
+      render json: resource, status: :created
     else
       render json: {
         error: resource.errors.messages
