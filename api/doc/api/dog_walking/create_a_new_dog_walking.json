@@ -1,0 +1,69 @@
+{
+  "resource": "Dog Walking",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "dog_walkings",
+  "description": "Create a new dog walking",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "duration",
+      "description": "duration"
+    },
+    {
+      "required": true,
+      "name": "latitude",
+      "description": "latitude"
+    },
+    {
+      "required": true,
+      "name": "longitude",
+      "description": "longitude"
+    },
+    {
+      "required": true,
+      "name": "scheduled_date",
+      "description": "scheduled_date"
+    },
+    {
+      "required": true,
+      "name": "dogs",
+      "description": "dogs"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "dog_walkings",
+      "request_body": "{\"duration\":30,\"latitude\":\"-23.524962\",\"longitude\":\"-46.731325\",\"scheduled_date\":\"Mon Nov 11 2019 16:30:00\",\"dogs\":[1]}",
+      "request_headers": {
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTczMDk4NjgwLCJleHAiOjE1NzU2OTA2ODAsImp0aSI6IjgyZWU5OThhLWY5MmYtNGQ0Yi1iZmFkLWQ5NzY1Y2I3ZDMxZSJ9.UKV2JoqSsLz0AnWc0epGV01mvU88-lryYMzisn95Zjo",
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"id\": 19,\n  \"duration\": 30,\n  \"latitude\": \"-23.524962\",\n  \"longitude\": \"-46.731325\",\n  \"begin_date\": null,\n  \"end_date\": null,\n  \"scheduled_date\": \"2019-11-11T16:30:00.000Z\",\n  \"price\": 25.0,\n  \"created_at\": \"2019-11-07T03:51:20.313Z\",\n  \"updated_at\": \"2019-11-07T03:51:20.313Z\",\n  \"user_id\": null,\n  \"dog_walking_status_id\": 1\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"47f0bfd8105657035da5b7e5b5a2dbf4\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "fcd0eafa-f51f-4aef-8c66-c43a4abb5b12",
+        "X-Runtime": "0.048874",
+        "Vary": "Origin",
+        "Content-Length": "284"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -1,12 +1,67 @@
 {
   "resources": [
     {
+      "name": "Dog Walking",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Add begin_date to dog walking",
+          "link": "dog_walking/add_begin_date_to_dog_walking.json",
+          "groups": "all",
+          "route": "dog_walkings/:id/start_walk",
+          "method": "post"
+        },
+        {
+          "description": "Add end_date to dog walking",
+          "link": "dog_walking/add_end_date_to_dog_walking.json",
+          "groups": "all",
+          "route": "dog_walkings/:id/finish_walk",
+          "method": "post"
+        },
+        {
+          "description": "Create a new dog walking",
+          "link": "dog_walking/create_a_new_dog_walking.json",
+          "groups": "all",
+          "route": "dog_walkings",
+          "method": "post"
+        },
+        {
+          "description": "Delete dog walking",
+          "link": "dog_walking/delete_dog_walking.json",
+          "groups": "all",
+          "route": "dog_walkings/:id",
+          "method": "delete"
+        },
+        {
+          "description": "Get a list of dog walkings",
+          "link": "dog_walking/get_a_list_of_dog_walkings.json",
+          "groups": "all",
+          "route": "dog_walkings",
+          "method": "get"
+        },
+        {
+          "description": "Get dog walking by id",
+          "link": "dog_walking/get_dog_walking_by_id.json",
+          "groups": "all",
+          "route": "dog_walkings/:id",
+          "method": "get"
+        },
+        {
+          "description": "Update walker id",
+          "link": "dog_walking/update_walker_id.json",
+          "groups": "all",
+          "route": "dog_walkings/:id",
+          "method": "put"
+        }
+      ]
+    },
+    {
       "name": "Registration",
       "explanation": null,
       "examples": [
         {
-          "description": "200",
-          "link": "registration/200.json",
+          "description": "201",
+          "link": "registration/201.json",
           "groups": "all",
           "route": "/signup",
           "method": "post"
@@ -37,6 +92,19 @@
           "groups": "all",
           "route": "/login",
           "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "User",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "200",
+          "link": "user/200.json",
+          "groups": "all",
+          "route": "/users/:id/dog_walkings",
+          "method": "get"
         }
       ]
     }

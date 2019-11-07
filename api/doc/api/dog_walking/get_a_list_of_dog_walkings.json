@@ -1,0 +1,65 @@
+{
+  "resource": "Dog Walking",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "dog_walkings",
+  "description": "Get a list of dog walkings",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": false,
+      "name": "all",
+      "description": "return all types of dog walkings"
+    },
+    {
+      "required": true,
+      "name": "page",
+      "description": "page"
+    },
+    {
+      "required": true,
+      "name": "per_page",
+      "description": "per_page"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "dog_walkings?all=true&page=1&per_page=5",
+      "request_body": null,
+      "request_headers": {
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTczMDk4Njc3LCJleHAiOjE1NzU2OTA2NzcsImp0aSI6ImM3NDNjNWQwLTRkZTgtNGE3MC1hMzhhLTJhMWNkMWUwZjljZiJ9.fb1gMhh9lCXx9t4bCn4vnSNIhzkvj_AMihvhd2m8ess",
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "all": "true",
+        "page": "1",
+        "per_page": "5"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[\n  {\n    \"id\": 1,\n    \"duration\": 30,\n    \"latitude\": \"-23.534296\",\n    \"longitude\": \"-46.724113\",\n    \"begin_date\": \"2019-11-09T16:32:00.000Z\",\n    \"end_date\": \"2019-11-09T17:01:00.000Z\",\n    \"scheduled_date\": \"2019-11-09T16:30:00.000Z\",\n    \"price\": 40.0,\n    \"created_at\": \"2019-11-07T03:51:17.313Z\",\n    \"updated_at\": \"2019-11-07T03:51:17.313Z\",\n    \"user_id\": 1,\n    \"dog_walking_status_id\": 4\n  },\n  {\n    \"id\": 2,\n    \"duration\": 30,\n    \"latitude\": \"-23.534296\",\n    \"longitude\": \"-46.724113\",\n    \"begin_date\": \"2019-11-07T16:32:00.000Z\",\n    \"end_date\": \"2019-11-07T17:01:00.000Z\",\n    \"scheduled_date\": \"2019-11-07T16:30:00.000Z\",\n    \"price\": 25.0,\n    \"created_at\": \"2019-11-07T03:51:17.405Z\",\n    \"updated_at\": \"2019-11-07T03:51:17.405Z\",\n    \"user_id\": 1,\n    \"dog_walking_status_id\": 4\n  },\n  {\n    \"id\": 3,\n    \"duration\": 60,\n    \"latitude\": \"-23.558529\",\n    \"longitude\": \"-46.692096\",\n    \"begin_date\": \"2019-11-08T12:32:00.000Z\",\n    \"end_date\": \"2019-11-08T13:33:00.000Z\",\n    \"scheduled_date\": \"2019-11-08T12:30:00.000Z\",\n    \"price\": 55.0,\n    \"created_at\": \"2019-11-07T03:51:17.443Z\",\n    \"updated_at\": \"2019-11-07T03:51:17.443Z\",\n    \"user_id\": 2,\n    \"dog_walking_status_id\": 4\n  },\n  {\n    \"id\": 4,\n    \"duration\": 30,\n    \"latitude\": \"-23.558529\",\n    \"longitude\": \"-46.692096\",\n    \"begin_date\": null,\n    \"end_date\": null,\n    \"scheduled_date\": \"2019-11-12T12:30:00.000Z\",\n    \"price\": 25.0,\n    \"created_at\": \"2019-11-07T03:51:17.480Z\",\n    \"updated_at\": \"2019-11-07T03:51:17.480Z\",\n    \"user_id\": 2,\n    \"dog_walking_status_id\": 2\n  },\n  {\n    \"id\": 5,\n    \"duration\": 60,\n    \"latitude\": \"-23.534296\",\n    \"longitude\": \"-46.724113\",\n    \"begin_date\": null,\n    \"end_date\": null,\n    \"scheduled_date\": \"2019-11-13T11:00:00.000Z\",\n    \"price\": 55.0,\n    \"created_at\": \"2019-11-07T03:51:17.514Z\",\n    \"updated_at\": \"2019-11-07T03:51:17.514Z\",\n    \"user_id\": 2,\n    \"dog_walking_status_id\": 2\n  }\n]",
+      "response_headers": {
+        "Link": "<http://example.org/dog_walkings?all=true&page=4&per_page=5>; rel=\"last\", <http://example.org/dog_walkings?all=true&page=2&per_page=5>; rel=\"next\"",
+        "Per-Page": "5",
+        "Total": "18",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"4c9f413c8be320f0b8c452ad2262a69b\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "616a58af-fe2d-4f95-8bd1-c32f622307a6",
+        "X-Runtime": "0.131070",
+        "Vary": "Origin",
+        "Content-Length": "1538"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

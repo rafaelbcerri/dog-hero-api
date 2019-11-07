@@ -1,0 +1,49 @@
+{
+  "resource": "Dog Walking",
+  "resource_explanation": null,
+  "http_method": "PUT",
+  "route": "dog_walkings/:id",
+  "description": "Update walker id",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "walker_id",
+      "description": "walker_id"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "dog_walkings/10",
+      "request_body": "{\"walker_id\":\"1\"}",
+      "request_headers": {
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTczMDk4Njg1LCJleHAiOjE1NzU2OTA2ODUsImp0aSI6IjU4NjNiYzZjLWNkYzktNDYyMS1iNzQyLTlmMTA3YzcxY2YyOCJ9.Hcqq3z4x9fLDoO9YDvg3ne-RCemS46WnZk39RgrrW3Q",
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"user_id\": 1,\n  \"dog_walking_status_id\": 2,\n  \"id\": 10,\n  \"duration\": 60,\n  \"latitude\": \"-23.534296\",\n  \"longitude\": \"-46.724113\",\n  \"begin_date\": null,\n  \"end_date\": null,\n  \"scheduled_date\": \"2019-11-16T17:00:00.000Z\",\n  \"price\": 55.0,\n  \"created_at\": \"2019-11-07T03:51:25.115Z\",\n  \"updated_at\": \"2019-11-07T03:51:25.473Z\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"87e1bf86e647c6c52ec3036e3c9b16ab\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "7802a49a-7a43-4d51-a606-82794ea80f49",
+        "X-Runtime": "0.098932",
+        "Vary": "Origin",
+        "Content-Length": "281"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

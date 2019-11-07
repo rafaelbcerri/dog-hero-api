@@ -40,8 +40,8 @@
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
         "Cache-Control": "no-cache",
-        "X-Request-Id": "24ca8ab2-0ff6-491b-9051-6791d344e41f",
-        "X-Runtime": "0.216845",
+        "X-Request-Id": "74f30373-2cdb-4390-ab88-67e0a6ef9225",
+        "X-Runtime": "0.016887",
         "Vary": "Origin",
         "Content-Length": "38"
       },
