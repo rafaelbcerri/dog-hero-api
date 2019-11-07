@@ -45,6 +45,11 @@ class DogWalkingsController < ApplicationController
     render json: dog_walking
   end
 
+  def destroy
+    DogWalking.find_by_id(params['id']).destroy
+    render status: 204
+  end
+
   def start_walk
     dog_walking = DogWalking.find(params['dog_walking_id'])
     dog_walking.dog_walking_status = DogWalkingStatus.find_by_name('in_progress')
