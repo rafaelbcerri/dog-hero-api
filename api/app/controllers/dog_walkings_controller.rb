@@ -27,7 +27,7 @@ class DogWalkingsController < ApplicationController
     dog_walking.calculate_price
 
     dog_walking.save
-    render json: dog_walking
+    render json: dog_walking, status: :created
   end
 
   def show
