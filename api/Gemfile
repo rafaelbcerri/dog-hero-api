@@ -31,6 +31,11 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem "rspec-rails", "~> 3.9"
+  gem "test", "~> 1.0"
+  gem "shoulda-matchers", "~> 4.1"
+  gem "factory_bot_rails", "~> 5.1"
+  gem "rspec_api_documentation", "~> 6.1"
 end
 
 group :development do
@@ -40,30 +45,17 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :test do
+  gem "database_cleaner", "~> 1.7"
+  gem "timecop", "~> 0.9.1"
+end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
 gem "dotenv-rails", "~> 2.7"
-
 gem "rack-cors", "~> 1.0"
-
 gem "devise", "~> 4.7"
 gem "devise-jwt", "~> 0.6.0"
-
 gem "will_paginate", "~> 3.2"
-
 gem "api-pagination", "~> 4.8"
-
-gem "rspec-rails", "~> 3.9", :group => [:development, :test]
-gem "test", "~> 1.0", :group => [:development, :test]
-
-gem "shoulda-matchers", "~> 4.1", :group =>[:development, :test]
-
-gem "factory_bot_rails", "~> 5.1", :groups => [:development, :test]
-
-gem "rspec_api_documentation", "~> 6.1", :groups => [:development, :test]
-
 gem "raddocs", "~> 2.2"
-
-gem "database_cleaner", "~> 1.7", :group => :test
