@@ -7,6 +7,9 @@ class User < ApplicationRecord
   has_many :dog
   has_many :dog_walking
 
+  validates :name, presence: true
+  validates :role, presence: true
+
   def jwt_payload
     role = User.find_by_id(self.id).role['name']
     name = User.find_by_id(self.id)['name']

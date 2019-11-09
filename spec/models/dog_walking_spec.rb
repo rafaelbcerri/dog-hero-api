@@ -10,6 +10,16 @@ RSpec.describe DogWalking, type: :model do
     it { should belong_to(:user).optional }
   end
 
+  describe 'validations' do
+    it { should validate_presence_of(:duration) }
+    it { should validate_presence_of(:latitude) }
+    it { should validate_presence_of(:latitude) }
+    it { should validate_presence_of(:scheduled_date) }
+    it { should validate_presence_of(:dog_walking_status_id) }
+    it { should validate_presence_of(:price) }
+    it { should validate_presence_of(:dogs) }
+  end
+
   describe '#calculate_price' do
 
     let(:dog) { build(:dog) }
