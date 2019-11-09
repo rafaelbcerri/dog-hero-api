@@ -6,4 +6,13 @@ class User < ApplicationRecord
   belongs_to :role
   has_many :dog
   has_many :dog_walking
+
+  def jwt_payload
+    role = User.find_by_id(self.id).role['name']
+    name = User.find_by_id(self.id)['name']
+    {
+      name: name,
+      role: role
+    }
+  end
 end
