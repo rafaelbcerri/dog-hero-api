@@ -6,14 +6,14 @@ resource 'User' do
   header 'Accept', 'application/json'
   header 'Content-Type', 'application/json'
 
-  let(:user) { User.find_by_id(3) }
-  let(:api_key) { 'Bearer ' + Warden::JWTAuth::UserEncoder.new.call(user, :user, nil).first }
 
-  get '/users/:id/dog_walkings' do
+  get '/pet-owner/:id/dog-walkings' do
+    let(:user) { User.find_by_id(3) }
+    let(:api_key) { 'Bearer ' + Warden::JWTAuth::UserEncoder.new.call(user, :user, nil).first }
     let(:id) { user.id }
 
     context '200' do
-      example_request 'GET - All dog walkings from user' do
+      example_request 'GET - All dog walkings from pet owner' do
         expect(status).to eq 200
 
         resp = JSON.parse(response_body)

@@ -9,7 +9,7 @@ resource 'Dog Walking' do
   let(:user) { User.find_by_id(3) }
   let(:api_key) { 'Bearer ' + Warden::JWTAuth::UserEncoder.new.call(user, :user, nil).first }
 
-  get 'dog_walkings' do
+  get 'dog-walkings' do
     parameter :all, 'return all types of dog walkings', :required => false
     parameter :page, 'page', :required => true
     parameter :per_page, 'per_page', :required => true
@@ -39,7 +39,7 @@ resource 'Dog Walking' do
     end
   end
 
-  post 'dog_walkings' do
+  post 'dog-walkings' do
     parameter :duration, 'duration', :required => true
     parameter :latitude, 'latitude', :required => true
     parameter :longitude, 'longitude', :required => true
@@ -73,7 +73,7 @@ resource 'Dog Walking' do
     end
   end
 
-  get 'dog_walkings/:id' do
+  get 'dog-walkings/:id' do
     context '200' do
       let(:id) { 1 }
 
@@ -96,7 +96,7 @@ resource 'Dog Walking' do
     end
   end
 
-  put 'dog_walkings/:id' do
+  put 'dog-walkings/:id' do
     parameter :walker_id, 'walker_id', :required => true
 
     context '200' do
@@ -113,7 +113,7 @@ resource 'Dog Walking' do
     end
   end
 
-  delete 'dog_walkings/:id' do
+  delete 'dog-walkings/:id' do
     context '204' do
       let(:id) { 10 }
 
@@ -123,7 +123,7 @@ resource 'Dog Walking' do
     end
   end
 
-  post 'dog_walkings/:id/start_walk' do
+  post 'dog-walkings/:id/start-walk' do
     before do
       Timecop.freeze(Time.now)
     end
@@ -145,7 +145,7 @@ resource 'Dog Walking' do
     end
   end
 
-  post 'dog_walkings/:id/finish_walk' do
+  post 'dog-walkings/:id/finish-walk' do
     before do
       Timecop.freeze(Time.now)
     end
