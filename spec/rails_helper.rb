@@ -38,11 +38,16 @@ RSpec.configure do |config|
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation
+    DatabaseCleaner.clean
+    Rails.application.load_seed
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.strategy = :transaction
   end
 
   config.before(:each) do
     DatabaseCleaner.start
-    Rails.application.load_seed
   end
 
   config.after(:each) do
