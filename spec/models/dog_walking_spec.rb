@@ -20,6 +20,16 @@ RSpec.describe DogWalking, type: :model do
     it { should validate_presence_of(:dogs) }
   end
 
+  describe 'scopes' do
+    it "should only return published posts" do
+      expect(DogWalking.without_walker_and_status_created.where_values_hash)
+        .to include({
+          "dog_walking_status_id" => 1,
+          "user_id" => nil
+        })
+    end
+  end
+
   describe '#calculate_price' do
 
     let(:dog) { build(:dog) }
