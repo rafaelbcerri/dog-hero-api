@@ -1,5 +1,5 @@
 class DogWalkingsController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
     if params[:all]
@@ -12,7 +12,9 @@ class DogWalkingsController < ApplicationController
       page: params['page'],
       per_page: params['per_page']
     )
-    paginate json: paginated_dog_walking
+
+    paginate json: paginated_dog_walking,
+      include: [:dogs, :dog_walking_status]
   end
 
   def create
