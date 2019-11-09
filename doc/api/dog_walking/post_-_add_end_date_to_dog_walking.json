@@ -1,0 +1,45 @@
+{
+  "resource": "Dog Walking",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "dog-walkings/:id/finish-walk",
+  "description": "POST - Add end_date to dog walking",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "dog-walkings/10/finish-walk",
+      "request_body": null,
+      "request_headers": {
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQ2FtaWxhIiwicm9sZSI6InBldF9vd25lciIsInN1YiI6IjMiLCJzY3AiOiJ1c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE1NzMzMzA5OTYsImV4cCI6MTU3MzkzNTc5NiwianRpIjoiZDU2YThiZDEtMmMwMy00ZWE5LWJhMTMtZWM0ODZhNWQyYzZiIn0.Un3ty4CjdtpCZuXhPFMVSmOjcRrEu9ygLmCTW4zuEA0",
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"dog_walking_status_id\": 4,\n  \"end_date\": \"2019-11-09T20:23:16.312Z\",\n  \"id\": 10,\n  \"duration\": 60,\n  \"latitude\": \"-23.534296\",\n  \"scheduled_date\": \"2019-11-16T17:00:00.000Z\",\n  \"price\": 55.0,\n  \"longitude\": \"-46.724113\",\n  \"begin_date\": null,\n  \"created_at\": \"2019-11-09T20:23:15.367Z\",\n  \"updated_at\": \"2019-11-09T20:23:16.312Z\",\n  \"user_id\": null\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"2eb8b752823ef83080e4c0f0dd90004f\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "155689ce-e5d7-4d8b-9dac-50c142282a5c",
+        "X-Runtime": "0.034089",
+        "Vary": "Origin",
+        "Content-Length": "306"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "resource": "User",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/walker/:id/dog-walkings",
+  "description": "GET - All dog walkings from walker",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/walker/1/dog-walkings",
+      "request_body": null,
+      "request_headers": {
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiSm_Do28iLCJyb2xlIjoid2Fsa2VyIiwic3ViIjoiMSIsInNjcCI6InVzZXIiLCJhdWQiOm51bGwsImlhdCI6MTU3MzMzMDk5NiwiZXhwIjoxNTczOTM1Nzk2LCJqdGkiOiIwYTBjZTEwZi1hYmU2LTQ4ODYtODA2OC1iZTJiMmVjMWE0MzkifQ.gdyDjmxsDFRckIHVNqW2kczPIxrYdCUJR7PCYPEuaQw",
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[\n  {\n    \"id\": 1,\n    \"duration\": 30,\n    \"latitude\": \"-23.534296\",\n    \"longitude\": \"-46.724113\",\n    \"begin_date\": \"2019-11-09T16:32:00.000Z\",\n    \"end_date\": \"2019-11-09T17:01:00.000Z\",\n    \"scheduled_date\": \"2019-11-09T16:30:00.000Z\",\n    \"price\": 40.0,\n    \"created_at\": \"2019-11-09T20:23:15.097Z\",\n    \"updated_at\": \"2019-11-09T20:23:15.097Z\",\n    \"user_id\": 1,\n    \"dog_walking_status_id\": 4,\n    \"dogs\": [\n      {\n        \"id\": 1,\n        \"name\": \"Lola\",\n        \"age\": 2,\n        \"created_at\": \"2019-11-09T20:23:14.852Z\",\n        \"updated_at\": \"2019-11-09T20:23:14.852Z\",\n        \"user_id\": 3\n      },\n      {\n        \"id\": 2,\n        \"name\": \"Duda\",\n        \"age\": 13,\n        \"created_at\": \"2019-11-09T20:23:14.861Z\",\n        \"updated_at\": \"2019-11-09T20:23:14.861Z\",\n        \"user_id\": 3\n      }\n    ],\n    \"dog_walking_status\": {\n      \"id\": 4,\n      \"name\": \"done\",\n      \"created_at\": \"2019-11-09T20:23:14.922Z\",\n      \"updated_at\": \"2019-11-09T20:23:14.922Z\"\n    },\n    \"user\": {\n      \"id\": 1,\n      \"name\": \"João\",\n      \"email\": \"joao@gmail.com\",\n      \"created_at\": \"2019-11-09T20:23:14.773Z\",\n      \"updated_at\": \"2019-11-09T20:23:14.773Z\",\n      \"role_id\": 2,\n      \"image\": \"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&h=400&w=400\"\n    }\n  },\n  {\n    \"id\": 2,\n    \"duration\": 30,\n    \"latitude\": \"-23.534296\",\n    \"longitude\": \"-46.724113\",\n    \"begin_date\": \"2019-11-07T16:32:00.000Z\",\n    \"end_date\": \"2019-11-07T17:01:00.000Z\",\n    \"scheduled_date\": \"2019-11-07T16:30:00.000Z\",\n    \"price\": 25.0,\n    \"created_at\": \"2019-11-09T20:23:15.135Z\",\n    \"updated_at\": \"2019-11-09T20:23:15.135Z\",\n    \"user_id\": 1,\n    \"dog_walking_status_id\": 4,\n    \"dogs\": [\n      {\n        \"id\": 1,\n        \"name\": \"Lola\",\n        \"age\": 2,\n        \"created_at\": \"2019-11-09T20:23:14.852Z\",\n        \"updated_at\": \"2019-11-09T20:23:14.852Z\",\n        \"user_id\": 3\n      }\n    ],\n    \"dog_walking_status\": {\n      \"id\": 4,\n      \"name\": \"done\",\n      \"created_at\": \"2019-11-09T20:23:14.922Z\",\n      \"updated_at\": \"2019-11-09T20:23:14.922Z\"\n    },\n    \"user\": {\n      \"id\": 1,\n      \"name\": \"João\",\n      \"email\": \"joao@gmail.com\",\n      \"created_at\": \"2019-11-09T20:23:14.773Z\",\n      \"updated_at\": \"2019-11-09T20:23:14.773Z\",\n      \"role_id\": 2,\n      \"image\": \"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&h=400&w=400\"\n    }\n  },\n  {\n    \"id\": 6,\n    \"duration\": 60,\n    \"latitude\": \"-23.558529\",\n    \"longitude\": \"-46.692096\",\n    \"begin_date\": null,\n    \"end_date\": null,\n    \"scheduled_date\": \"2019-11-13T18:00:00.000Z\",\n    \"price\": 35.0,\n    \"created_at\": \"2019-11-09T20:23:15.264Z\",\n    \"updated_at\": \"2019-11-09T20:23:15.264Z\",\n    \"user_id\": 1,\n    \"dog_walking_status_id\": 2,\n    \"dogs\": [\n      {\n        \"id\": 3,\n        \"name\": \"Cookie\",\n        \"age\": 4,\n        \"created_at\": \"2019-11-09T20:23:14.868Z\",\n        \"updated_at\": \"2019-11-09T20:23:14.868Z\",\n        \"user_id\": 4\n      }\n    ],\n    \"dog_walking_status\": {\n      \"id\": 2,\n      \"name\": \"scheduled\",\n      \"created_at\": \"2019-11-09T20:23:14.904Z\",\n      \"updated_at\": \"2019-11-09T20:23:14.904Z\"\n    },\n    \"user\": {\n      \"id\": 1,\n      \"name\": \"João\",\n      \"email\": \"joao@gmail.com\",\n      \"created_at\": \"2019-11-09T20:23:14.773Z\",\n      \"updated_at\": \"2019-11-09T20:23:14.773Z\",\n      \"role_id\": 2,\n      \"image\": \"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&h=400&w=400\"\n    }\n  }\n]",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"9d9178a2b51c58286977678d7b067327\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "c99d13f8-4f83-4ed9-addc-8f222328d795",
+        "X-Runtime": "0.055890",
+        "Vary": "Origin",
+        "Content-Length": "2659"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

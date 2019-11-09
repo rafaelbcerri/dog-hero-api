@@ -3,7 +3,7 @@
   "resource_explanation": null,
   "http_method": "POST",
   "route": "/signup",
-  "description": "201",
+  "description": "POST - Account already exists",
   "explanation": null,
   "parameters": [
     {
@@ -34,7 +34,7 @@
     {
       "request_method": "POST",
       "request_path": "/signup",
-      "request_body": "{\"name\":\"Tester\",\"email\":\"tester@gmail.com\",\"password\":\"123123\",\"role\":\"walker\"}",
+      "request_body": "{\"name\":\"João\",\"email\":\"joao@gmail.com\",\"password\":\"123123\",\"role\":\"walker\"}",
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
@@ -44,17 +44,16 @@
       "request_query_parameters": {
       },
       "request_content_type": "application/json",
-      "response_status": 201,
-      "response_status_text": "Created",
-      "response_body": "{\n  \"id\": 5,\n  \"name\": \"Tester\",\n  \"email\": \"tester@gmail.com\",\n  \"created_at\": \"2019-11-07T03:51:35.147Z\",\n  \"updated_at\": \"2019-11-07T03:51:35.147Z\",\n  \"role_id\": 2,\n  \"image\": null\n}",
+      "response_status": 400,
+      "response_status_text": "Bad Request",
+      "response_body": "{\n  \"error\": {\n    \"email\": [\n      \"has already been taken\"\n    ]\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"eca79b815b2d2b87a83aee173dc8fdca\"",
-        "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "f39e4d13-5c18-4745-b528-d56cc03f96d5",
-        "X-Runtime": "0.057029",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "1ea7a1b7-129c-432b-b3a1-ad19cbfe1db0",
+        "X-Runtime": "0.051468",
         "Vary": "Origin",
-        "Content-Length": "156"
+        "Content-Length": "46"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

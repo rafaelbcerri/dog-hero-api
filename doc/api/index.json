@@ -5,52 +5,52 @@
       "explanation": null,
       "examples": [
         {
-          "description": "Add begin_date to dog walking",
-          "link": "dog_walking/add_begin_date_to_dog_walking.json",
+          "description": "DELETE - Remove dog walking",
+          "link": "dog_walking/delete_-_remove_dog_walking.json",
           "groups": "all",
-          "route": "dog_walkings/:id/start_walk",
-          "method": "post"
-        },
-        {
-          "description": "Add end_date to dog walking",
-          "link": "dog_walking/add_end_date_to_dog_walking.json",
-          "groups": "all",
-          "route": "dog_walkings/:id/finish_walk",
-          "method": "post"
-        },
-        {
-          "description": "Create a new dog walking",
-          "link": "dog_walking/create_a_new_dog_walking.json",
-          "groups": "all",
-          "route": "dog_walkings",
-          "method": "post"
-        },
-        {
-          "description": "Delete dog walking",
-          "link": "dog_walking/delete_dog_walking.json",
-          "groups": "all",
-          "route": "dog_walkings/:id",
+          "route": "dog-walkings/:id",
           "method": "delete"
         },
         {
-          "description": "Get a list of dog walkings",
-          "link": "dog_walking/get_a_list_of_dog_walkings.json",
+          "description": "GET - Dog walking by id",
+          "link": "dog_walking/get_-_dog_walking_by_id.json",
           "groups": "all",
-          "route": "dog_walkings",
+          "route": "dog-walkings/:id",
           "method": "get"
         },
         {
-          "description": "Get dog walking by id",
-          "link": "dog_walking/get_dog_walking_by_id.json",
+          "description": "GET - List of dog walkings",
+          "link": "dog_walking/get_-_list_of_dog_walkings.json",
           "groups": "all",
-          "route": "dog_walkings/:id",
+          "route": "dog-walkings",
           "method": "get"
         },
         {
-          "description": "Update walker id",
-          "link": "dog_walking/update_walker_id.json",
+          "description": "POST - Add begin_date to dog walking",
+          "link": "dog_walking/post_-_add_begin_date_to_dog_walking.json",
           "groups": "all",
-          "route": "dog_walkings/:id",
+          "route": "dog-walkings/:id/start-walk",
+          "method": "post"
+        },
+        {
+          "description": "POST - Add end_date to dog walking",
+          "link": "dog_walking/post_-_add_end_date_to_dog_walking.json",
+          "groups": "all",
+          "route": "dog-walkings/:id/finish-walk",
+          "method": "post"
+        },
+        {
+          "description": "POST - Create new dog walking",
+          "link": "dog_walking/post_-_create_new_dog_walking.json",
+          "groups": "all",
+          "route": "dog-walkings",
+          "method": "post"
+        },
+        {
+          "description": "PUT - Update walker id",
+          "link": "dog_walking/put_-_update_walker_id.json",
+          "groups": "all",
+          "route": "dog-walkings/:id",
           "method": "put"
         }
       ]
@@ -60,15 +60,15 @@
       "explanation": null,
       "examples": [
         {
-          "description": "201",
-          "link": "registration/201.json",
+          "description": "POST - Account already exists",
+          "link": "registration/post_-_account_already_exists.json",
           "groups": "all",
           "route": "/signup",
           "method": "post"
         },
         {
-          "description": "400",
-          "link": "registration/400.json",
+          "description": "POST - Create user account",
+          "link": "registration/post_-_create_user_account.json",
           "groups": "all",
           "route": "/signup",
           "method": "post"
@@ -80,15 +80,15 @@
       "explanation": null,
       "examples": [
         {
-          "description": "200",
-          "link": "session/200.json",
+          "description": "POST - User invalid password",
+          "link": "session/post_-_user_invalid_password.json",
           "groups": "all",
           "route": "/login",
           "method": "post"
         },
         {
-          "description": "401",
-          "link": "session/401.json",
+          "description": "POST - User login",
+          "link": "session/post_-_user_login.json",
           "groups": "all",
           "route": "/login",
           "method": "post"
@@ -100,10 +100,17 @@
       "explanation": null,
       "examples": [
         {
-          "description": "200",
-          "link": "user/200.json",
+          "description": "GET - All dog walkings from pet owner",
+          "link": "user/get_-_all_dog_walkings_from_pet_owner.json",
           "groups": "all",
-          "route": "/users/:id/dog_walkings",
+          "route": "/pet-owner/:id/dog-walkings",
+          "method": "get"
+        },
+        {
+          "description": "GET - All dog walkings from walker",
+          "link": "user/get_-_all_dog_walkings_from_walker.json",
+          "groups": "all",
+          "route": "/walker/:id/dog-walkings",
           "method": "get"
         }
       ]

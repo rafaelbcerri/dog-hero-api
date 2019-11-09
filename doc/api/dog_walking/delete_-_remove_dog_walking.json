@@ -2,8 +2,8 @@
   "resource": "Dog Walking",
   "resource_explanation": null,
   "http_method": "DELETE",
-  "route": "dog_walkings/:id",
-  "description": "Delete dog walking",
+  "route": "dog-walkings/:id",
+  "description": "DELETE - Remove dog walking",
   "explanation": null,
   "parameters": [
 
@@ -14,10 +14,10 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "dog_walkings/10",
+      "request_path": "dog-walkings/10",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTczMDk4Njg4LCJleHAiOjE1NzU2OTA2ODgsImp0aSI6ImM1ZGFkYTliLTQwMmQtNGJmMy1iZDAzLTM2Y2JiZDIzNDgzMSJ9.DJPa3q5vrGvAtp488VrM1kGCDQf4rN-ZSKb2Hn7e-Ps",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQ2FtaWxhIiwicm9sZSI6InBldF9vd25lciIsInN1YiI6IjMiLCJzY3AiOiJ1c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE1NzMzMzA5OTYsImV4cCI6MTU3MzkzNTc5NiwianRpIjoiZTA4MzExYzktZTk5MC00ZjNhLTg0ZGUtYWNhN2FjZWQyYjQ0In0.VssyoZ-qJh6h3R5V7G6Spwlsad_aD8II_h7UFhnVRJE",
         "Accept": "application/json",
         "Content-Type": "application/json",
         "Host": "example.org",
@@ -31,8 +31,8 @@
       "response_body": null,
       "response_headers": {
         "Cache-Control": "no-cache",
-        "X-Request-Id": "8da93a56-7bc4-402f-91de-cc011e876a83",
-        "X-Runtime": "0.055310",
+        "X-Request-Id": "9b59983b-a45f-44e3-8d94-7c0946f655d3",
+        "X-Runtime": "0.025342",
         "Vary": "Origin"
       },
       "response_content_type": null,
