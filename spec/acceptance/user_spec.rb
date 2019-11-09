@@ -19,15 +19,15 @@ resource 'User' do
         resp = JSON.parse(response_body)
         expect(resp.length).to eq 8
         expect(resp.first).to include(
-          'duration' => 30,
+          'duration' => 60,
           'latitude' => '-23.534296',
           'longitude' => '-46.724113',
-          'begin_date' => '2019-11-09T16:32:00.000Z',
-          'end_date' => '2019-11-09T17:01:00.000Z',
-          'scheduled_date' => '2019-11-09T16:30:00.000Z',
-          'price' => 40.0,
-          'user_id' => 1,
-          'dog_walking_status_id' => 4
+          'begin_date' => nil,
+          'end_date' => nil,
+          'scheduled_date' => '2019-11-16T17:00:00.000Z',
+          'price' => 55.0,
+          'user_id' => nil,
+          'dog_walking_status_id' => 1
         )
       end
     end
