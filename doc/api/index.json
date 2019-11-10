@@ -112,6 +112,13 @@
           "groups": "all",
           "route": "/walker/:id/dog-walkings",
           "method": "get"
+        },
+        {
+          "description": "GET - All dogs from user",
+          "link": "user/get_-_all_dogs_from_user.json",
+          "groups": "all",
+          "route": "/users/:id/dogs",
+          "method": "get"
         }
       ]
     }

@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
     get 'pet-owner/:id/dog-walkings', to: 'users#get_pet_owner_dog_walkings'
     get 'walker/:id/dog-walkings', to: 'users#get_walker_dog_walkings'
+    get 'users/:id/dogs', to: 'users#get_dogs'
 
     mount Raddocs::App => '/docs'
 end

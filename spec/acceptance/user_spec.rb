@@ -6,6 +6,24 @@ resource 'User' do
   header 'Accept', 'application/json'
   header 'Content-Type', 'application/json'
 
+  get '/users/:id/dogs' do
+    let(:user) { User.find_by_id(3) }
+    let(:api_key) { 'Bearer ' + Warden::JWTAuth::UserEncoder.new.call(user, :user, nil).first }
+    let(:id) { user.id }
+
+    context '200' do
+      example_request 'GET - All dogs from user' do
+        expect(status).to eq 200
+
+        resp = JSON.parse(response_body)
+        expect(resp.length).to eq 2
+        expect(resp.first).to include(
+          'name' => 'Lola',
+          'age' => 2
+        )
+      end
+    end
+  end
 
   get '/pet-owner/:id/dog-walkings' do
     let(:user) { User.find_by_id(3) }

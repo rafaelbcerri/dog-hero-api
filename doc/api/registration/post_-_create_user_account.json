@@ -46,13 +46,13 @@
       "request_content_type": "application/json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\n  \"id\": 5,\n  \"name\": \"Tester\",\n  \"email\": \"tester@gmail.com\",\n  \"created_at\": \"2019-11-09T20:23:16.442Z\",\n  \"updated_at\": \"2019-11-09T20:23:16.442Z\",\n  \"role_id\": 2,\n  \"image\": null\n}",
+      "response_body": "{\n  \"id\": 5,\n  \"name\": \"Tester\",\n  \"email\": \"tester@gmail.com\",\n  \"created_at\": \"2019-11-10T21:38:52.771Z\",\n  \"updated_at\": \"2019-11-10T21:38:52.771Z\",\n  \"role_id\": 2,\n  \"image\": null\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"52f873f65c1443b3118efb5c4a3ee3fe\"",
+        "ETag": "W/\"5daef8ccea2ae8c97053ff08f96259c8\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "d2f93c4b-b2e9-4278-a25d-30722fc7f12d",
-        "X-Runtime": "0.046401",
+        "X-Request-Id": "5009b824-670f-4624-b7ef-41fea4adb285",
+        "X-Runtime": "0.043503",
         "Vary": "Origin",
         "Content-Length": "156"
       },

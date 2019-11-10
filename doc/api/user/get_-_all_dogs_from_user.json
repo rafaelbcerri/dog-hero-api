@@ -1,0 +1,45 @@
+{
+  "resource": "User",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/users/:id/dogs",
+  "description": "GET - All dogs from user",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/users/3/dogs",
+      "request_body": null,
+      "request_headers": {
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQ2FtaWxhIiwicm9sZSI6InBldF9vd25lciIsInN1YiI6IjMiLCJzY3AiOiJ1c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE1NzM0MjE5MzIsImV4cCI6MTU3NDAyNjczMiwianRpIjoiMWQ4YWRkZTYtZGI0ZC00YjliLTkxODgtYjRhYjI2MzNiNTJiIn0.34dGBYsyea7wdVyLn8ejjgXkSNlg7S26LRfkwZXFFf8",
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[\n  {\n    \"id\": 1,\n    \"name\": \"Lola\",\n    \"age\": 2,\n    \"created_at\": \"2019-11-10T21:38:51.627Z\",\n    \"updated_at\": \"2019-11-10T21:38:51.627Z\",\n    \"user_id\": 3\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Duda\",\n    \"age\": 13,\n    \"created_at\": \"2019-11-10T21:38:51.639Z\",\n    \"updated_at\": \"2019-11-10T21:38:51.639Z\",\n    \"user_id\": 3\n  }\n]",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"ebf7bb8f713fb62fc7679b156f3c1b7f\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "f982a8dd-1dcc-4ee4-9804-1011cc6260ad",
+        "X-Runtime": "0.026442",
+        "Vary": "Origin",
+        "Content-Length": "248"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

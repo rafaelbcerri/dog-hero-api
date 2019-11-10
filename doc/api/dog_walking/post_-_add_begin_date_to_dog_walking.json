@@ -17,7 +17,7 @@
       "request_path": "dog-walkings/10/start-walk",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQ2FtaWxhIiwicm9sZSI6InBldF9vd25lciIsInN1YiI6IjMiLCJzY3AiOiJ1c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE1NzMzMzA5OTYsImV4cCI6MTU3MzkzNTc5NiwianRpIjoiNzc2ZGUzNGYtZGFmNy00OGEyLTkzZDItYzM4ODdiNzRhNTI2In0.F8citrDi_D1CwEMCeEjHuNb6EgH4BIEH8VUwnDbIwzE",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQ2FtaWxhIiwicm9sZSI6InBldF9vd25lciIsInN1YiI6IjMiLCJzY3AiOiJ1c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE1NzM0MjE5MzIsImV4cCI6MTU3NDAyNjczMiwianRpIjoiYWQ3ZTkwNDYtNmQxMC00OTFlLWI0YzctYTM3MWJkZTRkYWIwIn0.lbmGnfEbCDzpltZ-vQ4pLf4vLOuAVmP2OwKW_uOXM8Q",
         "Accept": "application/json",
         "Content-Type": "application/json",
         "Host": "example.org",
@@ -28,13 +28,13 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"dog_walking_status_id\": 3,\n  \"begin_date\": \"2019-11-09T20:23:16.249Z\",\n  \"id\": 10,\n  \"duration\": 60,\n  \"latitude\": \"-23.534296\",\n  \"scheduled_date\": \"2019-11-16T17:00:00.000Z\",\n  \"price\": 55.0,\n  \"longitude\": \"-46.724113\",\n  \"end_date\": null,\n  \"created_at\": \"2019-11-09T20:23:15.367Z\",\n  \"updated_at\": \"2019-11-09T20:23:16.249Z\",\n  \"user_id\": null\n}",
+      "response_body": "{\n  \"dog_walking_status_id\": 3,\n  \"begin_date\": \"2019-11-10T21:38:52.658Z\",\n  \"id\": 10,\n  \"duration\": 60,\n  \"latitude\": \"-23.534296\",\n  \"scheduled_date\": \"2019-11-16T17:00:00.000Z\",\n  \"price\": 55.0,\n  \"longitude\": \"-46.724113\",\n  \"end_date\": null,\n  \"created_at\": \"2019-11-10T21:38:52.084Z\",\n  \"updated_at\": \"2019-11-10T21:38:52.658Z\",\n  \"user_id\": null\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"945e3edaeb96395abae270f85aa110a1\"",
+        "ETag": "W/\"87db59af517c38868503a3993ff50212\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "f79e986c-b16a-4ecd-88f3-20b0144bf3b3",
-        "X-Runtime": "0.031320",
+        "X-Request-Id": "ef4eb767-513c-42d7-92ac-e2e8b12f50c2",
+        "X-Runtime": "0.021906",
         "Vary": "Origin",
         "Content-Length": "306"
       },

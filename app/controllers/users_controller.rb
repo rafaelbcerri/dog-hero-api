@@ -1,6 +1,14 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
 
+  def get_dogs
+    resource = Dog
+      .joins(:user)
+      .where(:users => { id:  params[:id] })
+
+    render json: resource
+  end
+
   def get_pet_owner_dog_walkings
     dog_walkings = DogWalking
       .joins(:dogs)
