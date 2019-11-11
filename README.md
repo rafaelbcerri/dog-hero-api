@@ -1,24 +1,37 @@
-# README
+# DogHeroWeb
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requirements
 
-Things you may want to cover:
+* Port 3000 should be available in your computer.
+* Docker ([install](https://docs.docker.com/install/))
+* Docker Compose ([install](https://docs.docker.com/compose/install/))
+* DogHeroWeb ([install](https://github.com/rafaelbcerri/dog-hero-web))
 
-* Ruby version
+## Setup
 
-* System dependencies
+```sh
+$ git clone https://github.com/rafaelbcerri/dog-hero-api
+$ cd dog-hero-api
+$ docker-compose build
+$ docker-compose run api bundle exec rails db:setup
+```
 
-* Configuration
+## Start application
 
-* Database creation
+```sh
+$ docker-compose up
+```
 
-* Database initialization
+Do not forget to run [DogHeroWeb](https://github.com/rafaelbcerri/dog-hero-web)
 
-* How to run the test suite
+## Run tests
 
-* Services (job queues, cache servers, search engines, etc.)
+```sh
+$ docker-compose run api bundle exec rspec spec
+```
 
-* Deployment instructions
+## Generate api docs
 
-* ...
+```sh
+$ docker-compose run api bundle exec rails docs:generate
+```
