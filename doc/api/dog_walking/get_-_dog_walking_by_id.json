@@ -17,7 +17,7 @@
       "request_path": "dog-walkings/1",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQ2FtaWxhIiwicm9sZSI6InBldF9vd25lciIsInN1YiI6IjMiLCJzY3AiOiJ1c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE1NzM0MjE5MzIsImV4cCI6MTU3NDAyNjczMiwianRpIjoiMTkyNWIxMzItMTY0OS00OWM0LWIyZWMtYjJhZWVmY2E0MDExIn0.ScAqHuWIPp4qmMIbgYMqjdNfktoIYAJjjetfnuqLPZE",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQ2FtaWxhIiwicm9sZSI6InBldF9vd25lciIsInN1YiI6IjMiLCJzY3AiOiJ1c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE1NzM0MzY4NTQsImV4cCI6MTU3NDA0MTY1NCwianRpIjoiYTUwZGM1ZDAtNGYwYi00Njg4LWJiZDktNDM3N2M1ZDIwNmQ2In0.pUnPu-lXUZZexY1fwuM22Ag46n8897coOv7vzoSiZQs",
         "Accept": "application/json",
         "Content-Type": "application/json",
         "Host": "example.org",
@@ -28,13 +28,13 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"id\": 1,\n  \"duration\": 30,\n  \"latitude\": \"-23.534296\",\n  \"longitude\": \"-46.724113\",\n  \"begin_date\": \"2019-11-09T16:32:00.000Z\",\n  \"end_date\": \"2019-11-09T17:01:00.000Z\",\n  \"scheduled_date\": \"2019-11-09T16:30:00.000Z\",\n  \"price\": 40.0,\n  \"created_at\": \"2019-11-10T21:38:51.902Z\",\n  \"updated_at\": \"2019-11-10T21:38:51.902Z\",\n  \"user_id\": 1,\n  \"dog_walking_status_id\": 4,\n  \"walk_duration\": \"00:29:00\",\n  \"dogs\": [\n    {\n      \"id\": 1,\n      \"name\": \"Lola\",\n      \"age\": 2,\n      \"created_at\": \"2019-11-10T21:38:51.627Z\",\n      \"updated_at\": \"2019-11-10T21:38:51.627Z\",\n      \"user_id\": 3\n    },\n    {\n      \"id\": 2,\n      \"name\": \"Duda\",\n      \"age\": 13,\n      \"created_at\": \"2019-11-10T21:38:51.639Z\",\n      \"updated_at\": \"2019-11-10T21:38:51.639Z\",\n      \"user_id\": 3\n    }\n  ],\n  \"dog_walking_status\": {\n    \"id\": 4,\n    \"name\": \"done\",\n    \"created_at\": \"2019-11-10T21:38:51.703Z\",\n    \"updated_at\": \"2019-11-10T21:38:51.703Z\"\n  },\n  \"user\": {\n    \"id\": 1,\n    \"name\": \"João\",\n    \"email\": \"joao@gmail.com\",\n    \"created_at\": \"2019-11-10T21:38:51.551Z\",\n    \"updated_at\": \"2019-11-10T21:38:51.551Z\",\n    \"role_id\": 2,\n    \"image\": \"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&h=400&w=400\"\n  }\n}",
+      "response_body": "{\n  \"id\": 1,\n  \"duration\": 30,\n  \"latitude\": \"-23.534296\",\n  \"longitude\": \"-46.724113\",\n  \"begin_date\": \"2019-11-09T16:32:00.000Z\",\n  \"end_date\": \"2019-11-09T17:01:00.000Z\",\n  \"scheduled_date\": \"2019-11-09T16:30:00.000Z\",\n  \"price\": 40.0,\n  \"created_at\": \"2019-11-11T01:47:34.260Z\",\n  \"updated_at\": \"2019-11-11T01:47:34.260Z\",\n  \"user_id\": 1,\n  \"dog_walking_status_id\": 4,\n  \"walk_duration\": \"00:29:00\",\n  \"dogs\": [\n    {\n      \"id\": 1,\n      \"name\": \"Lola\",\n      \"age\": 2,\n      \"created_at\": \"2019-11-11T01:47:33.811Z\",\n      \"updated_at\": \"2019-11-11T01:47:33.811Z\",\n      \"user_id\": 3\n    },\n    {\n      \"id\": 2,\n      \"name\": \"Duda\",\n      \"age\": 13,\n      \"created_at\": \"2019-11-11T01:47:33.822Z\",\n      \"updated_at\": \"2019-11-11T01:47:33.822Z\",\n      \"user_id\": 3\n    }\n  ],\n  \"dog_walking_status\": {\n    \"id\": 4,\n    \"name\": \"done\",\n    \"created_at\": \"2019-11-11T01:47:33.882Z\",\n    \"updated_at\": \"2019-11-11T01:47:33.882Z\"\n  },\n  \"user\": {\n    \"id\": 1,\n    \"name\": \"João\",\n    \"email\": \"joao@gmail.com\",\n    \"created_at\": \"2019-11-11T01:47:33.739Z\",\n    \"updated_at\": \"2019-11-11T01:47:33.739Z\",\n    \"role_id\": 2,\n    \"image\": \"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&h=400&w=400\"\n  }\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"c893d00c5ae9d7151ce18f3e47e57b96\"",
+        "ETag": "W/\"919cfbbd969451dfdd529455c5cc5823\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "f0901b96-ac25-4989-873e-caf464dc7812",
-        "X-Runtime": "0.019341",
+        "X-Request-Id": "77aed8df-8c42-44d5-9640-a6b76c9b89ec",
+        "X-Runtime": "0.022239",
         "Vary": "Origin",
         "Content-Length": "1007"
       },
