@@ -17,7 +17,7 @@
       "request_path": "dog-walkings/10",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQ2FtaWxhIiwicm9sZSI6InBldF9vd25lciIsInN1YiI6IjMiLCJzY3AiOiJ1c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE1NzM0MzY4NTQsImV4cCI6MTU3NDA0MTY1NCwianRpIjoiMDcwMDliZDctNjliMS00MmU0LTg5YjUtMWQzNTRjZTZjMWJhIn0.vTN_M6WFF7mknpvH5JYspVmAYaMtJqARFVaki1lFVyU",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQ2FtaWxhIiwicm9sZSI6InBldF9vd25lciIsInN1YiI6IjMiLCJzY3AiOiJ1c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE1NzM0NDI1NjAsImV4cCI6MTU3NDA0NzM2MCwianRpIjoiOGM3OWFmMjEtOTAxMS00ZjcwLTkwM2EtYTc2ZGM0YTg0NjA0In0.yJdmocZlGr5wzLnJjUMTxBewEn2HETUWSd8UF6alIl0",
         "Accept": "application/json",
         "Content-Type": "application/json",
         "Host": "example.org",
@@ -31,8 +31,8 @@
       "response_body": null,
       "response_headers": {
         "Cache-Control": "no-cache",
-        "X-Request-Id": "ee1f874c-d0c5-4bd4-8b2e-26b46481b654",
-        "X-Runtime": "0.017335",
+        "X-Request-Id": "16743b0e-e8cc-4a4e-9548-d74cbb17e006",
+        "X-Runtime": "0.018882",
         "Vary": "Origin"
       },
       "response_content_type": null,

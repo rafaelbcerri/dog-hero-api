@@ -17,7 +17,7 @@ resource 'Registration' do
       let(:role) { 'walker' }
       let(:raw_post) { params.to_json }
 
-      example_request 'POST - Create user account' do
+      example_request 'POST - Create walker account' do
         expect(status).to eq 201
 
         resp = JSON.parse(response_body)
@@ -26,6 +26,30 @@ resource 'Registration' do
           'name' => 'Tester',
           'email' => 'tester@gmail.com',
           'role_id' => 2,
+        )
+      end
+    end
+
+    context '201' do
+      let(:name) { 'Tester' }
+      let(:email) { 'tester@gmail.com' }
+      let(:password) { '123123' }
+      let(:role) { 'pet_owner' }
+      let(:dogs) { [{
+        name: 'Cachorro',
+        age: 10
+      }]}
+      let(:raw_post) { params.to_json }
+
+      example_request 'POST - Create pet_owner account' do
+        expect(status).to eq 201
+
+        resp = JSON.parse(response_body)
+        expect(resp).to include(
+          'id' => 6,
+          'name' => 'Tester',
+          'email' => 'tester@gmail.com',
+          'role_id' => 1,
         )
       end
     end

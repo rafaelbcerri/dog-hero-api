@@ -17,7 +17,7 @@
       "request_path": "/users/3/dogs",
       "request_body": null,
       "request_headers": {
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQ2FtaWxhIiwicm9sZSI6InBldF9vd25lciIsInN1YiI6IjMiLCJzY3AiOiJ1c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE1NzM0MzY4NTUsImV4cCI6MTU3NDA0MTY1NSwianRpIjoiNmRiYTBlNmQtZWM3MC00ZjNmLWEwODAtNTU5MDU5NDA5NmNjIn0.OlGNfCCHUluin494V-PO6l71usGNaUshn5qvJqqDJr4",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQ2FtaWxhIiwicm9sZSI6InBldF9vd25lciIsInN1YiI6IjMiLCJzY3AiOiJ1c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE1NzM0NDI1NjEsImV4cCI6MTU3NDA0NzM2MSwianRpIjoiZmQ1ZDc1YTItM2MwYS00MmZlLWExNGMtMjBiNTQxMmQ3MmM5In0.qOJb9X0lRZpLN2X6GXDLq_VE0PfyK4nSXeFmgpL7sRk",
         "Accept": "application/json",
         "Content-Type": "application/json",
         "Host": "example.org",
@@ -28,13 +28,13 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[\n  {\n    \"id\": 1,\n    \"name\": \"Lola\",\n    \"age\": 2,\n    \"created_at\": \"2019-11-11T01:47:33.811Z\",\n    \"updated_at\": \"2019-11-11T01:47:33.811Z\",\n    \"user_id\": 3\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Duda\",\n    \"age\": 13,\n    \"created_at\": \"2019-11-11T01:47:33.822Z\",\n    \"updated_at\": \"2019-11-11T01:47:33.822Z\",\n    \"user_id\": 3\n  }\n]",
+      "response_body": "[\n  {\n    \"id\": 1,\n    \"name\": \"Lola\",\n    \"age\": 2,\n    \"created_at\": \"2019-11-11T03:22:39.583Z\",\n    \"updated_at\": \"2019-11-11T03:22:39.583Z\",\n    \"user_id\": 3\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Duda\",\n    \"age\": 13,\n    \"created_at\": \"2019-11-11T03:22:39.600Z\",\n    \"updated_at\": \"2019-11-11T03:22:39.600Z\",\n    \"user_id\": 3\n  }\n]",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"2e567465fe7ee2a00ccca6e49c05631a\"",
+        "ETag": "W/\"09d21fcf2165cac830d232a87adbbb13\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "f57ecbcf-2f22-4edf-9cb6-4a1572357ffb",
-        "X-Runtime": "0.024870",
+        "X-Request-Id": "16c4c7c5-9b54-4a7c-bdbd-530f10295483",
+        "X-Runtime": "0.025629",
         "Vary": "Origin",
         "Content-Length": "248"
       },
