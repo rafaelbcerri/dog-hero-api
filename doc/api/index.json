@@ -67,8 +67,15 @@
           "method": "post"
         },
         {
-          "description": "POST - Create user account",
-          "link": "registration/post_-_create_user_account.json",
+          "description": "POST - Create pet_owner account",
+          "link": "registration/post_-_create_pet_owner_account.json",
+          "groups": "all",
+          "route": "/signup",
+          "method": "post"
+        },
+        {
+          "description": "POST - Create walker account",
+          "link": "registration/post_-_create_walker_account.json",
           "groups": "all",
           "route": "/signup",
           "method": "post"

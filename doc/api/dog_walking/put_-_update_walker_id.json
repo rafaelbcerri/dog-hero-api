@@ -21,7 +21,7 @@
       "request_path": "dog-walkings/10",
       "request_body": "{\"walker_id\":\"1\"}",
       "request_headers": {
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQ2FtaWxhIiwicm9sZSI6InBldF9vd25lciIsInN1YiI6IjMiLCJzY3AiOiJ1c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE1NzM0MzY4NTQsImV4cCI6MTU3NDA0MTY1NCwianRpIjoiZjM2YWIwNmItNzVlYy00MmFlLTliZWUtNjMzYTcyMjY1ZjhlIn0.VEKvC2TQxkUSkiKj7Vx6_mRwpskHfBRV4tjhddBmLRs",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQ2FtaWxhIiwicm9sZSI6InBldF9vd25lciIsInN1YiI6IjMiLCJzY3AiOiJ1c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE1NzM0NDI1NjAsImV4cCI6MTU3NDA0NzM2MCwianRpIjoiMzg5M2U3NmQtNWJkNC00OTk0LTk2OWYtZTcwYTQxMWQwYWQyIn0.EVk6fNpUitLLXE_gOvOtOzfv8ETlimAgODFQ71N9q0M",
         "Accept": "application/json",
         "Content-Type": "application/json",
         "Host": "example.org",
@@ -32,13 +32,13 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"user_id\": 1,\n  \"dog_walking_status_id\": 2,\n  \"id\": 10,\n  \"duration\": 60,\n  \"latitude\": \"-23.534296\",\n  \"scheduled_date\": \"2019-11-16T17:00:00.000Z\",\n  \"price\": 55.0,\n  \"longitude\": \"-46.724113\",\n  \"begin_date\": null,\n  \"end_date\": null,\n  \"created_at\": \"2019-11-11T01:47:34.432Z\",\n  \"updated_at\": \"2019-11-11T01:47:34.947Z\"\n}",
+      "response_body": "{\n  \"user_id\": 1,\n  \"dog_walking_status_id\": 2,\n  \"id\": 10,\n  \"duration\": 60,\n  \"latitude\": \"-23.534296\",\n  \"scheduled_date\": \"2019-11-16T17:00:00.000Z\",\n  \"price\": 55.0,\n  \"longitude\": \"-46.724113\",\n  \"begin_date\": null,\n  \"end_date\": null,\n  \"created_at\": \"2019-11-11T03:22:40.182Z\",\n  \"updated_at\": \"2019-11-11T03:22:40.806Z\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"4b2a7570d95c53b9fedaee26d4b375d1\"",
+        "ETag": "W/\"99a71ae96fe449433f01185bd4b5691e\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "b6d3af69-37d5-4a7e-b4d9-7d8611d2ab88",
-        "X-Runtime": "0.027592",
+        "X-Request-Id": "216117b7-6f2b-4143-b7c4-f16ac2bb17dd",
+        "X-Runtime": "0.036080",
         "Vary": "Origin",
         "Content-Length": "281"
       },
